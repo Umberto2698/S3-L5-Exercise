@@ -556,13 +556,13 @@ const addClass = () => {
 
 */
 const halfTree = (n) => {
-  const body = document.body;
+  const div = document.querySelector("div");
   let halftree = "";
   for (let i = 0; i < n; i++) {
     halftree += "*";
     const p = document.createElement("p");
     p.innerText = halftree;
-    body.appendChild(p);
+    div.appendChild(p);
   }
 };
 halfTree(6);
@@ -578,6 +578,18 @@ halfTree(6);
   *****
 
 */
+const tree = (n) => {
+  const div = document.querySelector("body>div:nth-child(2)");
+  let Tree = "";
+  for (let i = 0; i < n; i++) {
+    Tree += "*";
+    Tree = Tree.padStart(i + (i + 1), "*");
+    const p = document.createElement("p");
+    p.innerText = Tree;
+    div.appendChild(p);
+  }
+};
+tree(5);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
