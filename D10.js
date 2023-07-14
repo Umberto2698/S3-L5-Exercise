@@ -594,3 +594,18 @@ tree(5);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+const isItPrime = (n) => {
+  let dividendo = 2;
+  if (n === 1) {
+    return true;
+  }
+  for (let i = 1; i < n; i++) {
+    if (dividendo === n) {
+      return true;
+    } else if (n % dividendo === 0) {
+      return false;
+    }
+    dividendo++;
+  }
+};
+console.log("29) ", isItPrime(13), isItPrime(1), isItPrime(121));
