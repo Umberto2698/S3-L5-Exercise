@@ -264,9 +264,7 @@ const deleteProp = (obj, str) => {
   return obj;
 };
 
-/* ESERCIZIO 12
-Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
-*/
+/* Questo array viene usato per gli esercizi. Non modificarlo. */
 const movies = [
   {
     Title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -378,6 +376,9 @@ const movies = [
   },
 ];
 
+/* ESERCIZIO 12
+Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
+*/
 newestMovie = (arr) => {
   let arrYear = [];
   arr.forEach((film) => arrYear.push(parseInt(film.Year, 10)));
@@ -390,7 +391,7 @@ newestMovie = (arr) => {
 console.log("12 ", newestMovie(movies));
 
 /* ESERCIZIO 13
-  Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
+Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 const countMovies = (arr) => {
   let total = 0;
@@ -554,6 +555,17 @@ const addClass = () => {
   ***
 
 */
+const halfTree = (n) => {
+  const body = document.body;
+  let halftree = "";
+  for (let i = 0; i < n; i++) {
+    halftree += "*";
+    const p = document.createElement("p");
+    p.innerText = halftree;
+    body.appendChild(p);
+  }
+};
+halfTree(6);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -570,5 +582,3 @@ const addClass = () => {
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
